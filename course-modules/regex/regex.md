@@ -248,13 +248,16 @@ Example 6
 
 Methods Summary
 ---------------
+methods | definition
+-----|------
 match(regExpObj) | Searches for regExpObj pattern in string and returns result. 
 replace(reqExpObj,str) |	Replaces all occurrences of the regExpObj pattern with str. 
 search(reqExpObj) 	|	Returns the position of matching regExpObj pattern within the string. 
 split(regExpObj,max) | 	Splits string everywhere there is a matching regExpObj pattern up to max splits. The substrings are returned in an array. 
  
 
-example
+examples
+--------
 	Check whether the given string is Numeric or not.
 
 Regular expression */^[0-9]+$/* is used to find a string is numeric. In this
