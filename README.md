@@ -1,2 +1,2 @@
-1. [Regex](regex.md)
-2. [Oops](oops.md)
+1. [Regex](course-modules/regex/regex.md)
+2. [Oops](course-modules/regex/oops.md)
