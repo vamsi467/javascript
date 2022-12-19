@@ -132,11 +132,11 @@ return 'Rating: ' + this.rating + ', price: ' + this.price;
 
 /* All the methods and properties you have added to the prototype are directly available as soon as you create a new object using the constructor. If you create a newtoy object using the Gadget() constructor, you can access all the methods and properties already defined.*/
 var newtoy = new Gadget('webcam', 'black');
-alert(newtoy.name);
-alert(newtoy.WhatAreYou());
-alert(newtoy.price);
-alert(newtoy.rating);
-alert(newtoy.getInfo());
+console.log(newtoy.name);
+console.log(newtoy.WhatAreYou());
+console.log(newtoy.price);
+console.log(newtoy.rating);
+console.log(newtoy.getInfo());
 
 
 // Here factory is a function
@@ -224,7 +224,7 @@ function Car(sColor, iDoors, iMpg) {
     this.doors = iDoors;
     this.mpg = iMpg;
     this.showColor = function () {
-        alert(this.color)
+        console.log(this.color)
     };
 }
 
@@ -272,8 +272,7 @@ oCar2.showColor();
    </body>
 </html>
 ```
-Functions
--------------
+# Functions
 
 The following three ways of defining a function
 
@@ -299,12 +298,10 @@ Output 3
 [inhertance](/course-modules/oops/inheritanceDemo.html)
 
 
-prototype chaining
-=============
+## Prototype Chaining
 	Prototype chaining is the default way to implement inheritance.
 
-
-<script>
+```js
 //parent class
 function pclass(){
 this.parent_property1= "TechMahindra";
@@ -327,16 +324,16 @@ return arg1+"child method data";
 //make child to inherit parent class
 Cclass.prototype=new pclass();
 var instance1=new Cclass();
-alert(instance1 instanceof pclass);
-alert(instance1 instanceof Cclass);
+console.log(instance1 instanceof pclass);
+console.log(instance1 instanceof Cclass);
 
-alert(instance1.parent_method1("Result"));
+console.log(instance1.parent_method1("Result"));
 
-</script>
-
+```
 Demo 2(6_inheritance)
 =====
 <!--inheritence in javascript -->
+```html
 <html>
 <head>
 <script type="text/javascript">
@@ -368,22 +365,21 @@ Triangle.prototype.name = 'Triangle';
 Triangle.prototype.getArea = function(){return this.side * this.height / 2;};
 
 var my = new Triangle(5, 10);
-alert(my.getArea());
+console.log(my.getArea());
 
 </script>
 <body>
 
 </body>
 </html>
-
-Inheriting the Prototype Only
-====================
+```
+## Inheriting the Prototype Only
 It is probably a good idea to inherit only the prototype, because all the reusable code is there. This means that inheriting the object contained in Shape.prototype is better than inheriting the object created with new Shape(). After all, new Shape() will only give you own shape properties which are not meant to be reused (otherwise they would be in the prototype). You gain a little more efficiency by:
 
 Not creating a new object for the sake of inheritance alone, and
 Having less lookups during runtime when it comes to searching for toString() for example.
 
-
+```js
 function Shape(){}
 // augment prototype
 Shape.prototype.name = 'shape';
@@ -408,3 +404,4 @@ Triangle.prototype.constructor = Triangle;
 // augment prototype
 Triangle.prototype.name = 'Triangle';
 Triangle.prototype.getArea = function(){return this.side * this.height / 2;}
+```
