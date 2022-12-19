@@ -56,17 +56,17 @@ Brackets
 -----------
 Brackets are used to find a range of characters:
 
-Expression 	Description 
---------------------------------------------------------------------------------
-[abc] 		Find any character between the brackets 
-[^abc] 		Find any character not between the brackets 
-[0-9] 		Find any digit from 0 to 9 
-[A-Z] 		Find any character from uppercase A to uppercase Z 
-[a-z] 		Find any character from lowercase a to lowercase z 
-[A-z] 		Find any character from uppercase A to lowercase z 
-[adgk] 		Find any character in the given set 
-[^adgk] 		Find any character outside the given set 
-(red|blue|green) 	Find any of the alternatives specified 
+Expression  |	Description 
+----------|----------------------------------------------------------------------
+[abc] 	| 	Find any character between the brackets 
+[^abc] |		Find any character not between the brackets 
+[0-9] 	|	Find any digit from 0 to 9 
+[A-Z] 	|	Find any character from uppercase A to uppercase Z 
+[a-z] 	|	Find any character from lowercase a to lowercase z 
+[A-z] 	|	Find any character from uppercase A to lowercase z 
+[adgk] |		Find any character in the given set 
+[^adgk] 	|	Find any character outside the given set 
+(red|blue|green)  |	Find any of the alternatives specified 
 
 Metacharacters
 ===========
@@ -248,7 +248,7 @@ Example 6
 
 Methods Summary
 ---------------
-methods | definition
+Methods | Definition
 -----|------
 match(regExpObj) | Searches for regExpObj pattern in string and returns result. 
 replace(reqExpObj,str) |	Replaces all occurrences of the regExpObj pattern with str. 
@@ -256,9 +256,9 @@ search(reqExpObj) 	|	Returns the position of matching regExpObj pattern within t
 split(regExpObj,max) | 	Splits string everywhere there is a matching regExpObj pattern up to max splits. The substrings are returned in an array. 
  
 
-examples
+Examples
 --------
-	Check whether the given string is Numeric or not.
+Check whether the given string is Numeric or not.
 
 Regular expression */^[0-9]+$/* is used to find a string is numeric. In this
 
