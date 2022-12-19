@@ -147,6 +147,7 @@ document.write(str.match(patt1));
 
 Example 2
 --------------
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -161,10 +162,11 @@ document.write(str.match(patt1));
 
 </body>
 </html>
-
+```
 
 Example 3
 -------------
+```html
 <html>
 <SCRIPT LANGUAGE='JavaScript'>
 <!--
@@ -177,7 +179,7 @@ Example 3
     //-->
 </SCRIPT>
 </html>
-
+```
 Methods used in RegularExpression
 ----------------------------------------------
 test()
@@ -186,6 +188,7 @@ test()
 
 Example 4
 ========
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -198,7 +201,7 @@ document.write(patt1.test("The best thing in my life is childhood"));
 
 </body>
 </html>
-
+```
 Output:Since there is an "e" in the string, the output of the code above will be:
 
 true will be printed.
@@ -210,6 +213,7 @@ The exec() method searches a string for a specified value, and returns the text 
 
 Example 5
 ========
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -222,13 +226,14 @@ document.write(patt1.test("The best thing in my life is childhood"));
 
 </body>
 </html>
-
+```
 
 replace()
 ======
 
 Example 6
 =======
+```html
 <html>
 <SCRIPT LANGUAGE='JavaScript'>
 <!--
@@ -241,7 +246,7 @@ Example 6
     //-->
 </SCRIPT>
 </html>
- 
+ ```
 
 
 match(regExpObj) 		Searches for regExpObj pattern in string and returns result. 
@@ -289,8 +294,3 @@ s = s.replace(/-/g,� �);
 
 output : �12 November 2008?
 
-
-
-
-
-====================================END============================
