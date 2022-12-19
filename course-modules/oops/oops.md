@@ -42,12 +42,11 @@ var box1 = new Box();
 console.log(box1.length);
 console.log(box1.display());
 ```
-
-property/variables-  length,breadth
-
-method-display
-
-box1- object.
+Here 
+Box is a **class**,
+length and breadth are **property/variables** of Box class
+display is a **method** of box class 
+box1 is an **object**
 
 Note: There is no keyword called as class in javascript same function keyword is used for class.
 =========================================================================================
