@@ -49,9 +49,9 @@ var pattern=/^\d{3}$/; // represent 3 matching nos
 ```
 
 To write a patter for this 999-999-9999
-```html
-var pattern=/^\d{3}-\d{3}-\d{4}$/;
 ```javascript
+var pattern=/^\d{3}-\d{3}-\d{4}$/;
+```
 Brackets
 -----------
 Brackets are used to find a range of characters:
