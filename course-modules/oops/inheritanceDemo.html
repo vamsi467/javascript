@@ -1,0 +1,35 @@
+ <script>
+//parent class
+function pclass(){
+this.parent_property1= "TechMahindra";
+this.parent_method1=function parent_method1(arg1)
+{
+return arg1+"parent method data";
+};
+}
+
+//establish child class
+function Cclass(){
+this.child_property1="TechMahindra2";
+this.child_method1=function child_method1(arg1)
+{
+return arg1+"child method data";
+};
+}
+
+//make child to inherit parent class
+
+Cclass.prototype=new pclass();
+
+var instance1=new Cclass();
+
+alert(instance1.parent_property1);
+//alert(instance1 instanceof pclass);
+//alert(instance1 instanceof Cclass);
+
+//alert(instance1.parent_method1("Result"));
+//alert(instance1.child_method1("Welcome"));
+
+
+
+</script>

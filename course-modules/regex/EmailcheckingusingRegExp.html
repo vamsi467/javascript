@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Checking an email address - Version 01</title>
+<script type="text/javascript" language="javascript">
+<!-- //
+function IsMatchingAddress(str){
+    var myRegExp = /[a-z0-9-]{1,30}@[a-z0-9-]{1,65}.[a-z]{3}/ ;
+    return myRegExp.test(str)
+}
+
+function TestGuess(){
+
+var EmailAddr = "dfdsfsdf@gmail.com".toLowerCase();
+alert(IsMatchingAddress(EmailAddr));
+}
+// -->
+</script>
+</head>
+<body>
+<h3>This page allows you to enter and check
+ an email address such as asdf@java2s.com</h3>
+<form>
+<button type="Button" onClick="TestGuess()">
+Click here to enter email address</button>
+</form>
+</body>
+</html>

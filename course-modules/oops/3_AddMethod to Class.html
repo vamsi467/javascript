@@ -1,0 +1,33 @@
+//Adding method to a class using prototype
+
+<HTML>
+<HEAD>
+<TITLE>Instance method demo</TITLE>
+</HEAD>
+   <BODY>
+   <H1>
+   <SCRIPT>
+
+   // constructor function
+  
+ function Rectangle(height, width){
+      this.height =  height;
+      this.width = width;
+   }
+  
+   function getArea () {
+      return this.height * this.width;
+   }
+   // turn the function into an object method
+   Rectangle.prototype.calcArea = getArea;
+
+   var theRectangle = new Rectangle (3, 5);
+   theRectangle.width = 10;
+
+   document.write("The rectangle instance height is: " + theRectangle.height + "<br>");
+   document.write("The rectangle instance width is: " + theRectangle.width  + "<br>");
+   document.write ("The calcArea method returns: " + theRectangle.calcArea());
+   </SCRIPT>
+   </H1>
+   </BODY>
+</HTML>

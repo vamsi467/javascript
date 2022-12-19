@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function Hero(name) {
+	this.name = name;//This refers to global object
+	this.occupation = 'Programmer';
+	this.whoAreYou = function() {
+		document.writeln( "I'm " + this.name + " and  a " + this.occupation);
+	}
+}
+
+		var h1 = new Hero('Michelangelo');
+ 		 h1.whoAreYou();
+                                 
+
+</script>
+<body>
+</body>
+</html>

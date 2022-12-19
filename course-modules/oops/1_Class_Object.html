@@ -1,0 +1,25 @@
+
+//JavaScript does not contains class statement.
+// JavaScript is a prototype-based language.
+// JavaScript uses functions as classes
+<script>
+function Box(){
+	this.length=10;
+	this.breadth=20;
+
+this.display=function display()
+{
+alert("Iam inside a display method");
+}
+
+this.area=function area()
+{
+ alert(this.length*this.breadth);
+}
+};
+
+var box1=new Box();
+box1.display();
+box1.area();
+
+</script>

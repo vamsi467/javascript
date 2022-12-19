@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>Printing properties of nested objects</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function student(name, age, grade, father, mother)
+{
+this.name = name
+this.age = age
+this.grade = grade
+this.parents = new parents(father, mother)
+}
+function parents(father, mother)
+{
+this.father = father
+this.mother = mother
+}
+var student1 = new student("Sharon", 16, 85, "Mark", "Stacy")
+function getProps(obj, objName)
+{
+var result = ""
+for (var i in obj)
+{
+if (typeof obj[i] == "object")
+result += getProps(obj[i], objName + "." + i)
+else
+result += objName + "." + i + " = " + obj[i] + "<BR>"
+}
+return result
+}
+document.write(getProps(student1, "student1"))
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</html>

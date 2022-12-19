@@ -1,0 +1,36 @@
+
+<!--inheritence in javascript
+-->
+<html>
+<head>
+<script type="text/javascript">
+function Shape(){
+this.name = 'shape';
+this.toString = function() {return this.name;};
+}
+
+function TwoDShape(){
+this.name = '2D shape';
+}
+
+function Triangle(side, height) {
+this.name = 'Triangle';
+this.side = side;
+this.height = height;
+this.getArea = function(){return this.side * this.height / 2;};
+}
+
+
+// good practice to reset the constructor after inheriting
+TwoDShape.prototype.constructor = TwoDShape;
+Triangle.prototype.constructor = Triangle;
+
+var my = new Triangle(5, 10);
+alert(my.getArea());
+
+</script>
+<body>
+
+</body>
+</html>
+

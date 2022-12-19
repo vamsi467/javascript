@@ -1,0 +1,22 @@
+function student()
+{
+ // constructor function
+// properties not initialized to meaningful value
+this.name = ""
+this.age = ""
+this.grade = ""
+}
+function teacher(name, age)
+{
+this.name = name
+this.age = age
+}
+var size = 35 // num of students in class
+var students = new Array(size + 1) // array is defined
+students[0] = new teacher("Kate", 45)
+for (var i = 1; i < size + 1; i++)
+{ 
+// or i <= size
+students[i] = new student()
+}
+alert(" is the teacher." + students[0].name)

@@ -1,10 +1,8 @@
 
 
-Object Oriented Programming in JavaScript
-==============================
+# Object Oriented Programming in JavaScript
 
-Introduction
-=============
+# Introduction
 
 1. Class: Defines the characteristics of the Object.
 2. Constructor: A method called at the moment of instantiation.
@@ -16,8 +14,7 @@ Introduction
 8. Abstraction: The conjunction of complex inheritance, methods, properties of an Object must be able to simulate a reality model.
 9. Polymorphism: Different Classes might define the same method or property.
 
-What is Class in JavaScript?
-===============
+# What is Class in JavaScript?
 JavaScript does not contains class statement. JavaScript is a prototype-based language. JavaScript uses functions as classes. Defining a class is as easy as defining a function. In the example below we define a new class called Car.
 
 ```js
@@ -30,9 +27,9 @@ EXAMPLE
 
 ```js
 function Box(){
-	this.length=10;
-	this.breadth=20;
-	this.display= function display()
+	this.length = 10;
+	this.breadth = 20;
+	this.display = function display()
 	{
 		console.log("Iam inside a display method");
 	}
@@ -48,40 +45,39 @@ length and breadth are **property/variables** of Box class
 display is a **method** of box class 
 box1 is an **object**
 
-Note: There is no keyword called as class in javascript same function keyword is used for class.
-=========================================================================================
+> There is no keyword called as class in javascript same function keyword is used for class.
 
-2.What is Object?
-
-Objects are created by using the new keyword followed by the name of the class.
+# What is Object?
+Generally objects are instances of classes.
+Objects are created by using the *new* keyword followed by the name of the class.
  
 Syntax:
+```js
 	var objectname=new objectname([arguments]);
-
+```
 Example
 	 Creating an instance of String object:
 
+```js
 	var StringObject1 = new String("Hello"); 
-
+```
 
 This statement creates an instance of StringObject1 and passes it the literal "Hello" .
-
- 
 The parentheses aren't required when the constructor doesn't require arguments, so these two lines could be rewritten as follows:
- 
+```js
 var oObject = new Object;
 var oStringObject = new String; 
+```
 
-
-sample demo
-=========
+### Sample demo
+```js
 function Car() { } 
 
   var car1 = new Car(); 
   var car2 = new Car(); 
  
-
-Dereferencing Objects
+```
+# Dereferencing Objects
 ===============
 JavaScript has a garbage collection routine.
  
@@ -89,28 +85,31 @@ When there are no remaining references to an object, the object is said to be de
  
 It is possible to forcibly dereference objects by setting all its references equal to null.
  
+```js
 var oObject = new Object;
 
 oObject = null; 
+```
  
+# Native Javascript Objects
 
-Native Objects(Some basic objects)
-==========================
-Object          Function      Array         String
-Boolean       Number       Date           RegExp
+1. Object          
+2. Function      
+3. Array         
+4. String
+5. Boolean       
+6. Number       
+7. Date
+8. RegExp
 
 
-3.Prototype Property
-================
+# Prototype Property
 	Used to add object properties and methods to your classes.
 
-Example:
-======
-<!--Prototype Proprty-->
-<html>
-<head>
-<script type="text/javascript">
-<!--function Gadget() which uses this to add two properties and one method to the objects it creates.-->
+### Example:
+```js
+
+/* function Gadget() which uses this to add two properties and one method to the objects it creates */
 
 function Gadget(name, color) {
 this.name = name;
@@ -119,7 +118,7 @@ this.whatAreYou = function(){
 return 'I am a ' + this.color + ' ' + this.name;
 
 
-<!--Let's add two more properties, price and rating, and a getInfo() method. Since prototype contains an object, you can just keep adding to it like this:-->
+/* Let's add two more properties, price and rating, and a getInfo() method. Since prototype contains an object, you can just keep adding to it like this: */ 
 Gadget.prototype.price = 100;
 Gadget.prototype.rating = 3;
 
@@ -131,54 +130,55 @@ return 'Rating: ' + this.rating + ', price: ' + this.price;
 }
 }
 
-<!--All the methods and properties you have added to the prototype are directly available as soon as you create a new object using the constructor. If you create a newtoy object using the Gadget() constructor, you can access all the methods and properties already defined.
--->
+/* All the methods and properties you have added to the prototype are directly available as soon as you create a new object using the constructor. If you create a newtoy object using the Gadget() constructor, you can access all the methods and properties already defined.*/
 var newtoy = new Gadget('webcam', 'black');
 alert(newtoy.name);
 alert(newtoy.WhatAreYou());
 alert(newtoy.price);
 alert(newtoy.rating);
 alert(newtoy.getInfo());
-</script>
-<body>
-</body>
-</html>
-
-<!--Here factory is a function>
 
 
+// Here factory is a function
+```
 
-What is method?
+
+# What is method?
 A method is essentially a function that is found inside of an object.
 
 Eg:
+```js
 var current=new Date()   //the current date
 var min=current.getMinutes()
 
+// Here getMinutes() is a method associated with objects.
+```
 
-Here getMinutes() is a method associated with objects.
-
-
-Constructor functions
-===============
+# Constructor functions
 
 There is another way to create objects: by using constructor functions.
  Let's see an example:
-		function Hero() {
-			this.occupation = 'Ninja';
-		}
-
+ ```js
+	function Hero() {
+		this.occupation = 'Ninja';
+	}
+```
 In order to create an object using this function, you use the new operator, like this:
-		 var hero = new Hero();
-		 hero.occupation;
 
-Output:Ninja
+```js
+	var hero = new Hero();
+	hero.occupation;
 
-Benefits of Constructor
-------------------------------
+	//  Output:Ninja
+
+```
+
+
+## Benefits of Constructor
 => The benefit of using constructor functions is that they accept parameters, which can be used when creating new objects. 
 
 Let's modify the constructor to accept one parameter and assign it to the name property.
+```js
 
 function Hero(name) {
 	this.name = name;//This refers to global object
@@ -187,33 +187,32 @@ function Hero(name) {
 		return "I'm " + this.name + " and I'm a " + this.occupation;
 	}
 }
-Now you can create different objects using the same constructor:
+// Now you can create different objects using the same constructor:
 
-		 var h1 = new Hero('Michelangelo');
- 		 var h2 = new Hero('Donatello');
-		 h1.whoAreYou();
-		 h2.whoAreYou();
-Output:
-	I'm Michelangelo and I'm a Ninja"
- 	"I'm Donatello and I'm a Ninja"
+	var h1 = new Hero('Michelangelo');
+ 	var h2 = new Hero('Donatello');
+	h1.whoAreYou();
+	h2.whoAreYou();
+// Output:
+// 	I'm Michelangelo and I'm a Ninja"
+// 	"I'm Donatello and I'm a Ninja"
 
+```
 
-Note
-====
-A class name is the name of the constructor.
- 
-A constructor 'acts as' a factory function.
- 
-No object is created inside the constructor.
- 
-this keyword is used in constructor.
- 
-When a constructor is called with the new operator, an object is created before the first line of the constructor.
- 
-Constructors create a separate copy for each object.
+> A class name is the name of the constructor.
 
-Example:
-======
+> A constructor 'acts as' a factory function.
+
+> No object is created inside the constructor.
+
+> this keyword is used in constructor.
+ 
+> When a constructor is called with the new operator, an object is created before the first line of the constructor.
+ 
+> Constructors create a separate copy for each object.
+
+### Example:
+```html
 <html>
 <head>
 <title>Constructor Example</title>
@@ -239,10 +238,10 @@ oCar2.showColor();
 
 </body>
 </html>
-
+```
 
 //Adding method to a class using prototype
-
+```html
 <HTML>
 <HEAD>
 <TITLE>Instance method demo</TITLE>
@@ -268,40 +267,36 @@ oCar2.showColor();
    document.write("The rectangle instance height is: " + theRectangle.height + "<br>");
    document.write("The rectangle instance width is: " + theRectangle.width  + "<br>");
    document.write ("The calcArea method returns: " + theRectangle.calcArea());
-   </SCRIPT>
-   </H1>
-   </BODY>
-</HTML>
-
+   </script>
+   </h1>
+   </body>
+</html>
+```
 Functions
 -------------
 
 The following three ways of defining a function
 
-1st method
---------------
+### 1st method
  	
 	function sum(a, b) {return a + b;};
 	sum(1, 2);
 
 Output 3
 
-2nd Method
----------------
+### 2nd Method
 	 var sum = function(a, b) {return a + b;};
 	sum(1, 2);
 
 Output 3
 
-3rd method
----------------
+### 3rd method
 
 	var sum = new Function('a', 'b', 'return a + b;');
 	 sum(1, 2)
  
-inheritence in JavaScript
-================
-(inheritanceDemo.html)
+## Inheritence in JavaScript
+[inhertance](/course-modules/oops/inheritanceDemo.html)
 
 
 prototype chaining
