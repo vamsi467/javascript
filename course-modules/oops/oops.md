@@ -32,18 +32,16 @@ EXAMPLE
 function Box(){
 	this.length=10;
 	this.breadth=20;
-
-this.display=function display()
-{
-alert("Iam inside a display method");
-}
+	this.display= function display()
+	{
+		console.log("Iam inside a display method");
+	}
 };
 
-var box1=new Box();
-alert(box1.length);
-alert(box1.display());
+var box1 = new Box();
+console.log(box1.length);
+console.log(box1.display());
 ```
-
 
 property/variables-  length,breadth
 
