@@ -19,15 +19,16 @@ Regular expressions are used to perform powerful pattern-matching and "search-an
 
 Syntax
 -----------
+```javascript
 var patt=new RegExp(pattern,modifiers);
 
 or 
 
 var patt=/pattern/modifiers;
 
-
-	 � pattern specifies the pattern of an expression
-   	 � modifiers specify if a search should be global, case-sensitive, etc.
+```
+  *pattern specifies the pattern of an expression
+  *modifiers specify if a search should be global, case-sensitive, etc.
 
 RegExp Modifiers
 -----------------------
@@ -129,6 +130,7 @@ test() 	Tests for a match in a string. Returns true or false
 
 Examples1
 -------------
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -141,7 +143,7 @@ document.write(str.match(patt1));
 
 </body>
 </html>
-
+```
 
 Example 2
 --------------
