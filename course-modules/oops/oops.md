@@ -16,36 +16,19 @@ Introduction
 8. Abstraction: The conjunction of complex inheritance, methods, properties of an Object must be able to simulate a reality model.
 9. Polymorphism: Different Classes might define the same method or property.
 
-
-What is Object?
-dereferenceing object.
-native objects.
-
-What is Class?
-Example
-
-Prototype property.
-
-Constructor Function
-Adding method to constructor function
-
-inheritance
-
-introduction:
-=========
-Object, method, property Class Encapsulation
-
-Class in JavaScript
+What is Class in JavaScript?
 ===============
 JavaScript does not contains class statement. JavaScript is a prototype-based language. JavaScript uses functions as classes. Defining a class is as easy as defining a function. In the example below we define a new class called Car.
 
-//Define the class Car 
-	function Car() { } 
+```js
+// Define the class Car 
 
+	function Car() { } 
+```
 
 EXAMPLE
 
-<script>
+```js
 function Box(){
 	this.length=10;
 	this.breadth=20;
@@ -59,7 +42,7 @@ alert("Iam inside a display method");
 var box1=new Box();
 alert(box1.length);
 alert(box1.display());
-</script>
+```
 
 
 property/variables-  length,breadth
