@@ -111,12 +111,12 @@ n$            |Matches any string with n at the end of it
 
 RegExp Object Properties
 ---------------------------------
-Property            Description 
-----------------------------------------------------------------------------------
-global            Specifies if the "g" modifier is set 
-ignoreCase 		Specifies if the "i" modifier is set 
-lastIndex            The index at which to start the next match 
-multiline            Specifies if the "m" modifier is set 
+Property|Description 
+-------------|---------------------------------------------------------------------
+global | Specifies if the "g" modifier is set 
+ignoreCase | Specifies if the "i" modifier is set 
+lastIndex | The index at which to start the next match 
+multiline | Specifies if the "m" modifier is set 
 
 
 RegExp Object Methods
