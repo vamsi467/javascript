@@ -1,8 +1,4 @@
----
-title: Javascript OOPS
-layout: template
-filename: regex.md
---- 
+
 
 What is RegExp?
 ------------------------
@@ -27,30 +23,35 @@ or
 var patt=/pattern/modifiers;
 
 ```
-  *pattern specifies the pattern of an expression
-  *modifiers specify if a search should be global, case-sensitive, etc.
+  * pattern specifies the pattern of an expression
+  * modifiers specify if a search should be global, case-sensitive, etc.
 
 RegExp Modifiers
 -----------------------
 Modifiers are used to perform case-insensitive and global searches.
 
-The i modifier is used to perform case-insensitive matching.
+The *i* modifier is used to perform case-insensitive matching.
 
-The g modifier is used to perform a global match (find all matches rather than stopping after the first match).
+The *g* modifier is used to perform a global match (find all matches rather than stopping after the first match).
 
-the modifier m is used to Perform multiline matching. 
+The modifier *m* is used to Perform multiline matching. 
 
-/-start and end of expression.
-^ and $ represent start and end of line.
-\d-single digit.
 
-eg: var pattern=/^\d$/;-it would only match one character string containing a number from 0 to 9.
+> The */* start and end of expression.
+> *^* and *$* represent start and end of line.
+>\d-single digit.
+
+eg: 
+```javascript
+var pattern=/^\d$/; // it would only match one character string containing a number from 0 to 9.
   
-var pattern=/^\d{3}$/;---- represent 3 matching nos
+var pattern=/^\d{3}$/; // represent 3 matching nos
+```
 
 To write a patter for this 999-999-9999
-
+```html
 var pattern=/^\d{3}-\d{3}-\d{4}$/;
+```javascript
 Brackets
 -----------
 Brackets are used to find a range of characters:
