@@ -121,10 +121,10 @@ multiline | Specifies if the "m" modifier is set
 
 RegExp Object Methods
 =================
-Method            Description 
-===============================
-exec() 	Tests for a match in a string. Returns the first match 
-test() 	Tests for a match in a string. Returns true or false 
+Method      |      Description 
+============= | ==================
+exec() |	Tests for a match in a string. Returns the first match 
+test() |	Tests for a match in a string. Returns true or false 
 
 
 
